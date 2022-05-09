@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         heightLalb.text = "150.0"
         weightLbl.text = "50.0"
-        print(peso, altura, resultado)
     }
     
     @IBAction func addHeight(_ sender: UIButton){
