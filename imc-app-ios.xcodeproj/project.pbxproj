@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		705587062829570700A4983B /* ResultadoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705587052829570700A4983B /* ResultadoView.swift */; };
 		70E62204281C196200B4EF64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E62203281C196200B4EF64 /* AppDelegate.swift */; };
 		70E62206281C196200B4EF64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E62205281C196200B4EF64 /* SceneDelegate.swift */; };
 		70E62208281C196200B4EF64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E62207281C196200B4EF64 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		705587052829570700A4983B /* ResultadoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadoView.swift; sourceTree = "<group>"; };
 		70E62200281C196200B4EF64 /* imc-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imc-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E62203281C196200B4EF64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70E62205281C196200B4EF64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				70E6220C281C196700B4EF64 /* Assets.xcassets */,
 				70E6220E281C196700B4EF64 /* LaunchScreen.storyboard */,
 				70E62211281C196700B4EF64 /* Info.plist */,
+				705587052829570700A4983B /* ResultadoView.swift */,
 			);
 			path = "imc-app-ios";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705587062829570700A4983B /* ResultadoView.swift in Sources */,
 				70E62208281C196200B4EF64 /* ViewController.swift in Sources */,
 				70E62204281C196200B4EF64 /* AppDelegate.swift in Sources */,
 				70E62206281C196200B4EF64 /* SceneDelegate.swift in Sources */,

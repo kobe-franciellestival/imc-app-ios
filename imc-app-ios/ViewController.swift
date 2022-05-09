@@ -15,15 +15,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var heightLalb: UILabel!
     @IBOutlet weak var weightLbl: UILabel!
-    @IBOutlet weak var resultadoLbl: UILabel!
-    @IBOutlet weak var infoResLbl: UILabel!
-    @IBOutlet weak var infoIMCLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         heightLalb.text = "150.0"
         weightLbl.text = "50.0"
-        resultadoLbl.text = " "
         print(peso, altura, resultado)
     }
     
@@ -54,19 +50,17 @@ class ViewController: UIViewController {
         weightLbl.text = DoubleToStr(num: peso)
         peso = StrToDouble(str: weightLbl.text!)
     }
-
-    @IBAction func calcularIMC(_ sender: UIButton) {
-        resultado = calculaIMC(p: peso, a: altura)
-        resultadoLbl.text = String(format: "%.2f", resultado)
-        infoIMCLbl.text = infoIMC(resultado: resultado)
-    }
+    
     func DoubleToStr (num: Double) -> String {
         let res = String(num)
         return res
     }
         
     func StrToDouble (str: String) -> Double {
-        let res = Double(str) ?? 0.0
+        var res = Double(str) ?? 0.0
+        if res <= 0 {
+            res = 0
+        }
         return res
     }
     
@@ -90,5 +84,15 @@ class ViewController: UIViewController {
         }
         return info
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ResultadoView{
+            let vc = segue.destination as? ResultadoView
+            resultado = calculaIMC(p: peso, a: altura)
+            vc?.resVar = String(format: "%.2f", resultado)
+            vc?.resInfo = infoIMC(resultado: resultado)
+        }
+    }
+    
 }
 
